@@ -1,13 +1,13 @@
-package com.openlab.laacademia.ui.complejo
+package com.openlab.laacademia.ui.main.complejos
 
 import com.openlab.laacademia.data.entity.ComplejoTO
 
 /**
  * Created by Bryam Soto on 12/01/2018.
  */
-class ComplejoPresenter constructor(private var view: Complejo.View): Complejo.Presenter{
+class ComplejosPresenter constructor(private var view: Complejos.View): Complejos.Presenter {
 
-    var model: Complejo.Model = ComplejoModel(this)
+    var model: Complejos.Model = ComplejosModel(this)
 
     override fun getComplejos() {
         model.getComplejos()

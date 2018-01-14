@@ -1,7 +1,6 @@
-package com.openlab.laacademia.ui.complejo
+package com.openlab.laacademia.ui.main.complejos
 
 import android.content.Context
-import android.support.design.widget.Snackbar
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +11,6 @@ import android.widget.Toast
 import com.openlab.laacademia.R
 import com.openlab.laacademia.data.entity.ComplejoTO
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_login.*
 
 /**
  * Created by Bryam Soto on 12/01/2018.
@@ -46,7 +44,11 @@ class ComplejosAdapter constructor(private var complejos : ArrayList<ComplejoTO>
         }
 
         fun ImageView.loadUrl(photo: String) {
-            Picasso.with(context).load(photo).into(imgComplejo)
+            Picasso.with(context)
+                    .load(photo)
+                    .placeholder(R.drawable.placeholder)
+                    .error(R.drawable.placeholder)
+                    .into(imgComplejo)
         }
 
     }

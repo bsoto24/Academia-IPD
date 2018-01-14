@@ -1,11 +1,11 @@
-package com.openlab.laacademia.ui.complejo
+package com.openlab.laacademia.ui.main.complejos
 
 import com.openlab.laacademia.data.entity.ComplejoTO
 
 /**
  * Created by Bryam Soto on 12/01/2018.
  */
-interface Complejo{
+interface Complejos {
 
     interface Model{
         fun getComplejos()

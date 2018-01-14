@@ -8,28 +8,18 @@
     tools:context="com.openlab.laacademia.ui.main.MainActivity"
     tools:layout_editor_absoluteY="25dp">
 
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="466dp"
-        android:background="@color/rojo_ipd"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        android:theme="@style/ToolbarNormal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:titleTextColor="@color/blanco"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="IPD"
-            android:textColor="@color/blanco"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     <FrameLayout
         android:id="@+id/flContainer"
@@ -48,7 +38,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:menu="@menu/navigation" />
 
 </android.support.constraint.ConstraintLayout>

@@ -2,9 +2,13 @@ package com.openlab.laacademia.ui.main
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
-import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import com.openlab.laacademia.R
+import com.openlab.laacademia.ui.main.complejos.ComplejosFragment
+import com.openlab.laacademia.ui.main.deportes.DisciplinasFragment
+import com.openlab.laacademia.ui.main.hijos.HijosFragment
+import com.openlab.laacademia.util.ActivityUtils.Companion.setFragment
+import com.openlab.laacademia.util.ActivityUtils.Companion.showToolbar
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,15 +17,15 @@ class MainActivity : AppCompatActivity() {
 
         when (item.itemId) {
             R.id.complejos -> {
-                flContainer.background = ContextCompat.getDrawable(baseContext, R.color.turquesa_ipd)
+                setFragment(ComplejosFragment(), R.id.flContainer)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.deportes -> {
-                flContainer.background = ContextCompat.getDrawable(baseContext, R.color.amarillo_ipd)
+                setFragment(DisciplinasFragment(), R.id.flContainer)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.hijos -> {
-                flContainer.background = ContextCompat.getDrawable(baseContext, R.color.verde_ipd)
+                setFragment(HijosFragment(), R.id.flContainer)
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -33,5 +37,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
+        showToolbar("La Academia", false, toolbar)
+        setFragment(ComplejosFragment(), R.id.flContainer)
     }
+
+
 }
