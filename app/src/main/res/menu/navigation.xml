@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/complejos"
+        android:icon="@drawable/ic_complejos"
+        android:title="@string/complejos" />
+
+    <item
+        android:id="@+id/deportes"
+        android:icon="@drawable/ic_deportes"
+        android:title="@string/deportes" />
+
+    <item
+        android:id="@+id/hijos"
+        android:icon="@drawable/ic_hijos"
+        android:title="@string/hijos" />
+
+</menu>
