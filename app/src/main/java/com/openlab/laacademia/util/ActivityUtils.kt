@@ -48,6 +48,9 @@ class ActivityUtils {
                         .placeholder(R.drawable.placeholder)
                         .error(R.drawable.placeholder)
                         .into(imageView)
+
+        fun AppCompatActivity.getStringResource(string : Int) = resources.getString(string)
+
     }
 
 }

@@ -12,8 +12,8 @@
         android:title="@string/deportes" />
 
     <item
-        android:id="@+id/hijos"
-        android:icon="@drawable/ic_hijos"
-        android:title="@string/hijos" />
+        android:id="@+id/cursos"
+        android:icon="@drawable/ic_cursos"
+        android:title="@string/cursos" />
 
 </menu>

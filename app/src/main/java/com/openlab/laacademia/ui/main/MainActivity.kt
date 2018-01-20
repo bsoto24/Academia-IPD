@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                 setFragment(DisciplinasFragment(), R.id.flContainer)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.hijos -> {
+            R.id.cursos -> {
                 setFragment(HijosFragment(), R.id.flContainer)
                 return@OnNavigationItemSelectedListener true
             }

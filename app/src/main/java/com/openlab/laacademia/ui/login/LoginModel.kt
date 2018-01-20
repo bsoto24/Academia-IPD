@@ -5,6 +5,6 @@ package com.openlab.laacademia.ui.login
  */
 class LoginModel constructor(private var presenter: Login.Presenter): Login.Model{
 
-    override fun login(user: CharSequence, password: CharSequence) = if (user == password) presenter.loginSuccessful() else presenter.showMessage("Incorrecto")
+    override fun login(user: CharSequence, password: CharSequence) = if (user == password) presenter.loginSuccessful() else presenter.showMessage("Usuario y/o contraseña incorrectos")
 
 }

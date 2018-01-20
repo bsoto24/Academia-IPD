@@ -2,9 +2,13 @@
     <string name="app_name">La Academia</string>
     <string name="complejos">Complejos</string>
     <string name="deportes">Deportes</string>
-    <string name="hijos">Hijos</string>
+    <string name="cursos">Cursos</string>
     <string name="disciplina">Disciplina</string>
-    <string name="next">Siguiente</string>
-    <string name="back">Atras</string>
-    <string name="finalize">Finalizar</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="atras">Atras</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="ipd">IPD</string>
+    <string name="dni_apoderado">DNI apoderado</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
 </resources>

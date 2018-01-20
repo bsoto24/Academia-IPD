@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_complejo_detail.*
 /**
  * Created by Bryam Soto on 20/01/2018.
  */
-class ComplejoDetailActivity : AppCompatActivity(){
+class ComplejoDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,9 +18,14 @@ class ComplejoDetailActivity : AppCompatActivity(){
         bind(intent.extras?.getSerializable("data") as ComplejoTO)
     }
 
-    fun bind(complejoTO: ComplejoTO){
+    fun bind(complejoTO: ComplejoTO) {
         loadUrl(complejoTO.photo, imgComplejo)
         tvComplejoName.text = complejoTO.name
+        val sb = StringBuilder()
+        for (index in 0 until 10) {
+            sb.append("${complejoTO.name} $index \n")
+        }
+        tvComplejoDetail.text = sb.toString()
     }
 
 }

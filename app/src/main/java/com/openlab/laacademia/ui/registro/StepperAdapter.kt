@@ -22,9 +22,9 @@ class StepperAdapter constructor(fragmentManager: FragmentManager, context: Cont
 
         val builder = StepViewModel.Builder(context)
         when (position) {
-            0 -> builder.setEndButtonLabel(R.string.next).create()
-            1 -> builder.setBackButtonLabel(R.string.back).setEndButtonLabel(R.string.next).create()
-            2 -> builder.setBackButtonLabel(R.string.back).setEndButtonLabel(R.string.finalize).create()
+            0 -> builder.setEndButtonLabel(R.string.siguiente).create()
+            1 -> builder.setBackButtonLabel(R.string.atras).setEndButtonLabel(R.string.siguiente).create()
+            2 -> builder.setBackButtonLabel(R.string.atras).setEndButtonLabel(R.string.finalizar).create()
         }
         return builder.create()
 

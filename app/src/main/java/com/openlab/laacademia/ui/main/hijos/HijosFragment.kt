@@ -12,6 +12,6 @@ import com.openlab.laacademia.R
  */
 class HijosFragment : Fragment(){
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? = inflater.inflate(R.layout.fragment_hijos, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? = inflater.inflate(R.layout.fragment_cursos, container, false)
 
 }

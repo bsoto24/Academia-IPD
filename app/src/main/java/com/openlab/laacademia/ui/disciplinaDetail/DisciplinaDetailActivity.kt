@@ -21,5 +21,10 @@ class DisciplinaDetailActivity : AppCompatActivity(){
     fun bind(disciplinaTO: DisciplinaTO){
         loadUrl(disciplinaTO.photo, imgDisciplina)
         tvDisciplinaName.text = disciplinaTO.name
+        val sb = StringBuilder()
+        for (index in 0 until 10) {
+            sb.append("${disciplinaTO.name} $index \n")
+        }
+        tvDisciplinaDetail.text = sb.toString()
     }
 }
