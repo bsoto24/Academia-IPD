@@ -7,14 +7,10 @@ import com.openlab.laacademia.data.entity.ComplejoTO
  */
 class ComplejosPresenter constructor(private var view: Complejos.View): Complejos.Presenter {
 
-    var model: Complejos.Model = ComplejosModel(this)
+    private var model: Complejos.Model = ComplejosModel(this)
 
-    override fun getComplejos() {
-        model.getComplejos()
-    }
+    override fun getComplejos() = model.getComplejos()
 
-    override fun showComplejos(complejos: ArrayList<ComplejoTO>) {
-        view.showComplejos(complejos)
-    }
+    override fun showComplejos(complejos: ArrayList<ComplejoTO>) = view.showComplejos(complejos)
 
 }

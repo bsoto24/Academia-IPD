@@ -3,4 +3,8 @@
     <string name="complejos">Complejos</string>
     <string name="deportes">Deportes</string>
     <string name="hijos">Hijos</string>
+    <string name="disciplina">Disciplina</string>
+    <string name="next">Siguiente</string>
+    <string name="back">Atras</string>
+    <string name="finalize">Finalizar</string>
 </resources>

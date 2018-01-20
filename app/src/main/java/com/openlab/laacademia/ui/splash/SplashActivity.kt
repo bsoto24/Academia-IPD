@@ -1,10 +1,10 @@
 package com.openlab.laacademia.ui.splash
 
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.openlab.laacademia.R
 import com.openlab.laacademia.ui.login.LoginActivity
+import com.openlab.laacademia.util.ActivityUtils.Companion.nextActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -13,10 +13,8 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Thread {
-            Thread.sleep(1000);
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
+            Thread.sleep(1000)
+            nextActivity(this, LoginActivity::class.java,true)
         }.start()
 
     }

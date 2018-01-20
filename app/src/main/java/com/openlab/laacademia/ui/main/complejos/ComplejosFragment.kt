@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.fragment_complejos.*
  */
 class ComplejosFragment : Fragment(), Complejos.View {
 
-    lateinit var presenter: Complejos.Presenter
+    var presenter: Complejos.Presenter = ComplejosPresenter(this)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_complejos, container, false)
@@ -23,13 +23,13 @@ class ComplejosFragment : Fragment(), Complejos.View {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        rvComplejos.layoutManager = GridLayoutManager(this.context, 2)
 
-        presenter = ComplejosPresenter(this)
         presenter.getComplejos()
+
     }
 
     override fun showComplejos(complejos: ArrayList<ComplejoTO>) {
+        rvComplejos.layoutManager = GridLayoutManager(this.context, 2)
         rvComplejos.adapter = ComplejosAdapter(complejos, this.context)
     }
 

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Academia-IPD.iml" filepath="$PROJECT_DIR$/Academia-IPD.iml" />
+      <module fileurl="file://C:\Users\ASUS\Desktop\Android\LaAcademia\Academia-IPD.iml" filepath="C:\Users\ASUS\Desktop\Android\LaAcademia\Academia-IPD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LaAcademia.iml" filepath="$PROJECT_DIR$/LaAcademia.iml" />
       <module fileurl="file://C:\Users\Bryam Soto\Desktop\ANDROID\Academia-IPD\LaAcademia.iml" filepath="C:\Users\Bryam Soto\Desktop\ANDROID\Academia-IPD\LaAcademia.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

@@ -5,7 +5,7 @@ package com.openlab.laacademia.ui.login
  */
 class LoginPresenter constructor(private var view: Login.View) : Login.Presenter{
 
-    var model: Login.Model = LoginModel(this)
+    private var model: Login.Model = LoginModel(this)
 
     override fun login(user: CharSequence, password: CharSequence){
         model.login(user, password)
