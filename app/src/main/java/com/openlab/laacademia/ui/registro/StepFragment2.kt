@@ -30,9 +30,7 @@ class StepFragment2 : Fragment(), Step{
         tvStep.text = "Seleccionado"
     }
 
-    override fun verifyStep(): VerificationError? {
-        return null
-    }
+    override fun verifyStep(): VerificationError? = null
 
     override fun onError(error: VerificationError) {
         Toast.makeText(context, "Error $error", Toast.LENGTH_SHORT).show()

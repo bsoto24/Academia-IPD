@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import com.openlab.laacademia.R
+import com.openlab.laacademia.util.ActivityUtils.Companion.showToastMessage
 import com.stepstone.stepper.StepperLayout
 import com.stepstone.stepper.VerificationError
 import kotlinx.android.synthetic.main.activity_registro.*
@@ -24,20 +25,12 @@ class RegistroActivity : AppCompatActivity(), StepperLayout.StepperListener {
 
     }
 
-    override fun onStepSelected(newStepPosition: Int) {
-        Toast.makeText(this, "Selected $newStepPosition", Toast.LENGTH_SHORT).show()
-    }
+    override fun onStepSelected(newStepPosition: Int) = showToastMessage("Selected $newStepPosition", Toast.LENGTH_SHORT)
 
-    override fun onError(verificationError: VerificationError?) {
-        Toast.makeText(this, "Error ${verificationError.toString()}", Toast.LENGTH_SHORT).show()
-    }
+    override fun onError(verificationError: VerificationError?) = showToastMessage("Error ${verificationError.toString()}", Toast.LENGTH_SHORT)
 
-    override fun onReturn() {
-        finish()
-    }
+    override fun onReturn() = finish()
 
-    override fun onCompleted(completeButton: View?) {
-        Toast.makeText(this, "Completed ${completeButton.toString()}", Toast.LENGTH_SHORT).show()
-    }
+    override fun onCompleted(completeButton: View?) = showToastMessage("Completed ${completeButton.toString()}", Toast.LENGTH_SHORT)
 
 }

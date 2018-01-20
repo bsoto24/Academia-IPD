@@ -11,6 +11,6 @@ class ComplejosPresenter constructor(private var view: Complejos.View): Complejo
 
     override fun getComplejos() = model.getComplejos()
 
-    override fun showComplejos(complejos: ArrayList<ComplejoTO>) = view.showComplejos(complejos)
+    override fun showComplejos(complejos: List<ComplejoTO>) = view.showComplejos(complejos)
 
 }

@@ -2,10 +2,12 @@ package com.openlab.laacademia.ui.login
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.Snackbar
+import android.widget.Toast
 import com.openlab.laacademia.R
 import com.openlab.laacademia.ui.main.MainActivity
 import com.openlab.laacademia.util.ActivityUtils.Companion.nextActivity
+import com.openlab.laacademia.util.ActivityUtils.Companion.showSnackbarMessage
+import com.openlab.laacademia.util.ActivityUtils.Companion.showToastMessage
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), Login.View {
@@ -25,12 +27,8 @@ class LoginActivity : AppCompatActivity(), Login.View {
         }
     }
 
-    override fun showMessage(message: CharSequence) {
-        Snackbar.make(lyContainer, message, Snackbar.LENGTH_SHORT).show()
-    }
+    override fun showMessage(message: CharSequence) = showSnackbarMessage(message, Toast.LENGTH_SHORT)
 
-    override fun loginSuccessful() {
-        nextActivity(this, MainActivity::class.java, true)
-    }
+    override fun loginSuccessful() = nextActivity(this, MainActivity::class.java, null, true)
 
 }

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.openlab.laacademia">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.registro.RegistroActivity"
+            android:name=".ui.splash.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyThemeNoBar">
             <intent-filter>
@@ -23,11 +23,20 @@
         </activity>
 
         <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".ui.main.MainActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".ui.login.LoginActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.complejoDetail.ComplejoDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.disciplinaDetail.DisciplinaDetailActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

@@ -12,12 +12,16 @@ interface Complejos {
     }
 
     interface View{
-        fun showComplejos(complejos: ArrayList<ComplejoTO>)
+        fun showComplejos(complejos: List<ComplejoTO>)
     }
 
     interface Presenter{
         fun getComplejos()
-        fun showComplejos(complejos: ArrayList<ComplejoTO>)
+        fun showComplejos(complejos: List<ComplejoTO>)
+    }
+
+    interface OnComplejoClickListener{
+        fun onComplejoClick(complejoTO: ComplejoTO)
     }
 
 }

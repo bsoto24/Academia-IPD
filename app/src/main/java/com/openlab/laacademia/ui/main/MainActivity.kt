@@ -5,7 +5,7 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import com.openlab.laacademia.R
 import com.openlab.laacademia.ui.main.complejos.ComplejosFragment
-import com.openlab.laacademia.ui.main.deportes.DisciplinasFragment
+import com.openlab.laacademia.ui.main.disciplinas.DisciplinasFragment
 import com.openlab.laacademia.ui.main.hijos.HijosFragment
 import com.openlab.laacademia.util.ActivityUtils.Companion.setFragment
 import com.openlab.laacademia.util.ActivityUtils.Companion.showToolbar

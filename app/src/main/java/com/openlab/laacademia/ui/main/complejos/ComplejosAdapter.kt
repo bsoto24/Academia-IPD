@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.openlab.laacademia.R
 import com.openlab.laacademia.data.entity.ComplejoTO
 import com.squareup.picasso.Picasso
@@ -15,28 +14,26 @@ import com.squareup.picasso.Picasso
 /**
  * Created by Bryam Soto on 12/01/2018.
  */
-class ComplejosAdapter constructor(private var complejos: ArrayList<ComplejoTO>, private var context: Context) : RecyclerView.Adapter<ComplejosAdapter.ComplejoVH>() {
+class ComplejosAdapter constructor(private var complejos: List<ComplejoTO>, private var context: Context, private var onComplejoClickListener: Complejos.OnComplejoClickListener) : RecyclerView.Adapter<ComplejosAdapter.ViewHolder>(){
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ComplejoVH = ComplejoVH(LayoutInflater.from(context).inflate(R.layout.item_complejo, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder = ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_complejo, parent, false), onComplejoClickListener)
 
-    override fun onBindViewHolder(holder: ComplejoVH, position: Int) = holder.bind(complejos[position], context)
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(complejos[position])
 
     override fun getItemCount(): Int = complejos.size
 
-    class ComplejoVH constructor(view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder constructor(itemView: View, private var onComplejoClickListener: Complejos.OnComplejoClickListener) : RecyclerView.ViewHolder(itemView){
 
-        private val tvComplejo: TextView = view.findViewById(R.id.tvComplejo)
-        private val imgComplejo: ImageView = view.findViewById(R.id.imgComplejo)
+        private val tvComplejo: TextView = itemView.findViewById(R.id.tvComplejoName)
+        private val imgComplejo: ImageView = itemView.findViewById(R.id.imgComplejo)
 
-        fun bind(complejo: ComplejoTO, context: Context) =
-                with(complejo) {
-                    tvComplejo.text = complejo.name
-                    imgComplejo.loadUrl(complejo.photo)
-                    imgComplejo.setOnClickListener {
-                        Toast.makeText(context, complejo.name, Toast.LENGTH_SHORT).show()
-                    }
-                }
-
+        fun bind(complejo: ComplejoTO) {
+            tvComplejo.text = complejo.name
+            imgComplejo.loadUrl(complejo.photo)
+            itemView.setOnClickListener{
+                onComplejoClickListener.onComplejoClick(complejo)
+            }
+        }
 
         private fun ImageView.loadUrl(photo: String) =
                 Picasso.with(context)
@@ -46,5 +43,4 @@ class ComplejosAdapter constructor(private var complejos: ArrayList<ComplejoTO>,
                         .into(imgComplejo)
 
     }
-
 }
